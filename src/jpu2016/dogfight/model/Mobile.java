@@ -3,23 +3,29 @@ package jpu2016.dogfight.model;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Point;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
 import jpu2016.dogfight.model.Direction;
 
-public class Mobile implements IMobile{
-	
+public class Mobile implements IMobile {
+
 	private Dimension dimension;
 	private Position position;
 	private int speed;
-	private Direction direction; 
-	
-	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image){
+	private Direction direction;
+	private Image[] images;
+
+	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) throws IOException {
 		this.dimension = dimension;
 		this.position = position;
 		this.speed = speed;
 		this.direction = direction;
+		buildAllimages(image);
 	}
-	
-	
+
 	@Override
 	public Direction getDirection() {
 		// TODO Auto-generated method stub
@@ -64,22 +70,17 @@ public class Mobile implements IMobile{
 		return speed;
 	}
 
-	@Override
-	public Image getImage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void placeInArea(IArea area) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -91,7 +92,7 @@ public class Mobile implements IMobile{
 	@Override
 	public void setDogfightModel(DogfightModel dogfightModel) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -105,40 +106,55 @@ public class Mobile implements IMobile{
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
-	public void moveUp(){
-		
+
+	public void moveUp() {
+
 	}
 
-	public void moveRight(){
-		
+	public void moveRight() {
+
 	}
-	
-	public void moveDown(){
-		
+
+	public void moveDown() {
+
 	}
-	
-	public void moveLeft(){
-		
+
+	public void moveLeft() {
+
 	}
-	
-	public Color getColor(){
-		
+
+	public Color getColor() {
+
 		return null;
-		
+
 	}
-	
-	public IDogfightModel getDogfightModel(){
-		
+
+	public IDogfightModel getDogfightModel() {
+
 		return null;
-		
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
+	private void buildAllimages(final String imageName) throws IOException {
+
+		this.images = new Image[4];
+
+		this.images[Direction.UP.ordinal()] = ImageIO.read(new File("images/" + imageName + "_UP.png"));
+
+		this.images[Direction.RIGHT.ordinal()] = ImageIO.read(new File("images/" + imageName + "_RIGHT.png"));
+
+		this.images[Direction.DOWN.ordinal()] = ImageIO.read(new File("images/" + imageName + "_DOWN.png"));
+
+		this.images[Direction.LEFT.ordinal()] = ImageIO.read(new File("images/" + imageName + "_LEFT.png"));
+
+	}
+
+	@Override
+
+	public Image getImage() {
+
+		return this.images[this.direction.ordinal()];
+
+	}
+
 }
