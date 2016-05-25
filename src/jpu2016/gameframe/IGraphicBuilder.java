@@ -1,7 +1,7 @@
 package jpu2016.gameframe;
 
-import java.awt.Graphics;
 import java.awt.image.ImageObserver;
+import java.awt.Graphics;
 
 public interface IGraphicBuilder {
 	
