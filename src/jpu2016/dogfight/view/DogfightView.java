@@ -6,21 +6,18 @@ import jpu2016.dogfight.controller.IOrderPerformer;
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.gameframe.GameFrame;
 
-public class DogfightView implements Runnable {
+public class DogfightView implements Runnable, IViewSystem {
 
-	private EventPerformer myEventPerformer;
-	private GraphicsBuilder myGraphicsBuilder;
-	private GameFrame myGameFrame;
+	private EventPerformer eventPerformer;
+	private GraphicsBuilder graphicsBuilder;
+	private GameFrame gameFrame;
 
 	public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable) {
 
-		this.myEventPerformer = new EventPerformer(orderPerformer);
-		this.myGraphicsBuilder = new GraphicsBuilder(dogfightModel);
-		this.myGameFrame = new GameFrame(null, myEventPerformer, myGraphicsBuilder, observable); // Remplacer_le_null_par_?
+		this.eventPerformer = new EventPerformer(orderPerformer);
+		this.graphicsBuilder = new GraphicsBuilder(dogfightModel);
+		this.gameFrame = new GameFrame(null, eventPerformer, graphicsBuilder, observable); // Remplacer_le_null_par_?
 
-	}
-
-	public void displaMessage(String message) {
 	}
 
 	public void closeAll() {
@@ -31,6 +28,12 @@ public class DogfightView implements Runnable {
 	public void run() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public String displayMessage(String mesage) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
