@@ -1,5 +1,7 @@
 package jpu2016.dogfight.model;
 
+import java.io.IOException;
+
 public class Missile extends Mobile {
 
 	private static int SPEED = 4;
@@ -10,7 +12,7 @@ public class Missile extends Mobile {
 	private static String IMAGE = "missile";
 	int distance_Traveled = 0;
 	
-	public Missile(Direction direction, Position position){
+	public Missile(Direction direction, Position position) throws IOException{
 		super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
 	}
 	

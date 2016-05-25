@@ -108,18 +108,26 @@ public class Mobile implements IMobile {
 	}
 
 	public void moveUp() {
-
+		
+		this.setDirection(Direction.UP);
+		
 	}
 
 	public void moveRight() {
+		
+		this.setDirection(Direction.RIGHT);
 
 	}
 
 	public void moveDown() {
+		
+		this.setDirection(Direction.DOWN);
 
 	}
 
 	public void moveLeft() {
+		
+		this.setDirection(Direction.LEFT);
 
 	}
 

@@ -1,4 +1,6 @@
 package jpu2016.dogfight.model;
+import java.io.IOException;
+
 import jpu2016.dogfight.model.Dimension;
 
 public class Plane extends Mobile{
@@ -8,7 +10,7 @@ public class Plane extends Mobile{
 	private static int HEIGHT = 30;
 	private int player;
 	
-	public Plane(int player, Direction direction, Position position, String image){
+	public Plane(int player, Direction direction, Position position, String image) throws IOException{
 		super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, image);
 	}
 	
