@@ -16,7 +16,7 @@ public class DogfightView implements Runnable, IViewSystem {
 
 		this.eventPerformer = new EventPerformer(orderPerformer);
 		this.graphicsBuilder = new GraphicsBuilder(dogfightModel);
-		this.gameFrame = new GameFrame(null, eventPerformer, graphicsBuilder, observable); // Remplacer_le_null_par_?
+		this.gameFrame = new GameFrame("Merci David", eventPerformer, graphicsBuilder, observable); // Remplacer_le_null_par_?
 
 	}
 

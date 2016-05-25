@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
 import jpu2016.dogfight.model.IDogfightModel;
-import jpu2016.dogfight.model.IMobile;
+import jpu2016.dogfight.model.*;
 import jpu2016.gameframe.IGraphicsBuilder;
 
 public class GraphicsBuilder implements IGraphicsBuilder {
@@ -15,7 +15,7 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
 	public GraphicsBuilder(IDogfightModel dogfightModel) {
 
-		this.emptySky = new BufferedImage(null, null, false, null);
+		this.emptySky = new BufferedImage(0,0,BufferedImage.TYPE_INT_RGB);
 		this.dogfightModel = dogfightModel;
 
 	}
