@@ -13,8 +13,11 @@ public class Plane extends Mobile{
 	}
 	
 	public boolean isPlayer(int player){
-		
-		return false;
+		if(this.player == player){
+			return true;
+		}else{
+			return false;
+		}
 		
 	}
 	

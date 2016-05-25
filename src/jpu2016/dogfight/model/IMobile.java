@@ -9,7 +9,7 @@ public interface IMobile {
 	void setDirection(Direction direction);
 	Point getPosition();
 	Dimension getDimension();
-	int geWidth();
+	int getWidth();
 	int getHeight();
 	int getSpeed();
 	Image getImage();

@@ -6,54 +6,62 @@ import java.awt.Point;
 import jpu2016.dogfight.model.Direction;
 
 public class Mobile implements IMobile{
-
+	
+	private Dimension dimension;
+	private Position position;
 	private int speed;
+	private Direction direction; 
 	
 	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image){
-		
+		this.dimension = dimension;
+		this.position = position;
+		this.speed = speed;
+		this.direction = direction;
 	}
 	
 	
 	@Override
 	public Direction getDirection() {
 		// TODO Auto-generated method stub
-		return null;
+		return direction;
 	}
 
 	@Override
 	public void setDirection(Direction direction) {
 		// TODO Auto-generated method stub
-		
+		this.direction = direction;
 	}
 
 	@Override
 	public Point getPosition() {
 		// TODO Auto-generated method stub
-		return null;
+		Point point;
+		point.setLocation(position.getX(), position.getY());
+		return point;
 	}
 
 	@Override
 	public Dimension getDimension() {
 		// TODO Auto-generated method stub
-		return null;
+		return dimension;
 	}
 
 	@Override
-	public int geWidth() {
+	public int getWidth() {
 		// TODO Auto-generated method stub
-		return 0;
+		return dimension.getWidth();
 	}
 
 	@Override
 	public int getHeight() {
 		// TODO Auto-generated method stub
-		return 0;
+		return dimension.getHeight();
 	}
 
 	@Override
 	public int getSpeed() {
 		// TODO Auto-generated method stub
-		return 0;
+		return speed;
 	}
 
 	@Override

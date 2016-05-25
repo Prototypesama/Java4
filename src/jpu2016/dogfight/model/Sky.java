@@ -6,9 +6,12 @@ public class Sky implements IArea{
 
 	private Dimension dimension;
 	
+	private Image image;
+	
 	public Sky(Dimension dimension) {
 		// TODO Auto-generated constructor stub
 		this.dimension = dimension;
+		image = null;
 	}
 
 	@Override
@@ -20,7 +23,7 @@ public class Sky implements IArea{
 	@Override
 	public Image getImage() {
 		// TODO Auto-generated method stub
-		return null;
+		return image;
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.Observable;
 
 public class DogfightModel extends Observable implements IDogfightModel{
 
-	private Sky monSky;
+	private Sky EmptySky;
 	
 	public DogfightModel() {
 		// TODO Auto-generated constructor stub
@@ -21,7 +21,7 @@ public class DogfightModel extends Observable implements IDogfightModel{
 	@Override
 	public void buildArea(Dimension dimension) {
 		// TODO Auto-generated method stub
-		monSky = new Sky(dimension);
+		EmptySky = new Sky(dimension);
 	}
 
 	@Override
