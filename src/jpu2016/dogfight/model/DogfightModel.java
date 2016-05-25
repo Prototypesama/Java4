@@ -15,7 +15,7 @@ public class DogfightModel extends Observable implements IDogfightModel{
 	@Override
 	public IArea getArea() {
 		// TODO Auto-generated method stub
-		return monSky;
+		return EmptySky;
 	}
 
 	@Override

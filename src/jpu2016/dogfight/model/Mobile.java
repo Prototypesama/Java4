@@ -35,7 +35,7 @@ public class Mobile implements IMobile{
 	@Override
 	public Point getPosition() {
 		// TODO Auto-generated method stub
-		Point point;
+		Point point = null;
 		point.setLocation(position.getX(), position.getY());
 		return point;
 	}
