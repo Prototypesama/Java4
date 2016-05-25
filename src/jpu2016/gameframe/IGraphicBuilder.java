@@ -8,4 +8,5 @@ public interface IGraphicBuilder {
 	void applyModelToGraphic(Graphics graphics, ImageObserver observer);
 	int getGlobalWidth();
 	int getGlobalHeight();
+	
 }
