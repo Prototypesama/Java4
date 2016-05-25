@@ -2,43 +2,42 @@ package jpu2016.dogfight.model;
 
 public class Position {
 
-	private double x;
-	private double y;
-	private double maxX;
-	private double maxY;
+	private int x;
+	private int y;
+	private int maxX;
+	private int maxY;
 	
-	public Position(double x, double y, double maxX, double maxY){
+	public Position(int x, int y, int maxX, int maxY){
 		this.x = x;
 		this.y = y;
-		this.maxX = maxX;
-		this.maxY = maxY;
 	}
 	
 	public Position(Position position){
-		
+		this.x = position.getX();
+		this.y = position.getY();
 	}
 
-	public double getX() {
+	public int getX() {
 		return x;
 	}
 
-	public void setX(double x) {
+	public void setX(int x) {
 		this.x = x;
 	}
 
-	public double getY() {
+	public int getY() {
 		return y;
 	}
 
-	public void setY(double y) {
+	public void setY(int y) {
 		this.y = y;
 	}
 
-	protected void setMaxX(double maxX) {
+	protected void setMaxX(int maxX) {
 		this.maxX = maxX;
 	}
 
-	protected void setMaxY(double maxY) {
+	protected void setMaxY(int maxY) {
 		this.maxY = maxY;
 	}
 	
