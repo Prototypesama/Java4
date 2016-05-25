@@ -37,7 +37,7 @@ public class DogfightModel extends Observable implements IDogfightModel{
 	}
 
 	@Override
-	public ArrayList<IMobile> getMobules() {
+	public ArrayList<IMobile> getMobiles() {
 		// TODO Auto-generated method stub
 		return null;
 	}

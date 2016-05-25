@@ -4,14 +4,17 @@ import java.awt.Image;
 
 public class Sky implements IArea{
 
+	private Dimension dimension;
+	
 	public Sky(Dimension dimension) {
 		// TODO Auto-generated constructor stub
+		this.dimension = dimension;
 	}
 
 	@Override
 	public Dimension getDimension() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.dimension;
 	}
 
 	@Override

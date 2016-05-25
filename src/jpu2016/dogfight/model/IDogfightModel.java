@@ -8,7 +8,7 @@ public interface IDogfightModel {
 	void buildArea(Dimension dimension);
 	void addMobile(IMobile Mobile);
 	void removeMobile(IMobile Mobile);
-	ArrayList<IMobile> getMobules();
+	ArrayList<IMobile> getMobiles();
 	IMobile getMobileByPlayer(int player);
 	void setMobilesHavesMoved();
 	
