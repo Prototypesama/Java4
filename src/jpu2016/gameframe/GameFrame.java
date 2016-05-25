@@ -11,10 +11,11 @@ public class GameFrame extends JFrame implements IEventPerformer, KeyListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 3235172926427814880L;
+	private IEventPerformer eventPerformer;
 
 	public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder graphicBuilder, Observable observable) {
-		
-		
+
+		this.eventPerformer = performer;
 
 	}
 
