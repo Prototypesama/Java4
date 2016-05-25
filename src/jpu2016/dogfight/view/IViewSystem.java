@@ -4,6 +4,5 @@ public interface IViewSystem {
 	
 	String displayMessage(String mesage);
 	void closeAll();
-
 	
 }
