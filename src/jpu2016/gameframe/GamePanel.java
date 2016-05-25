@@ -1,39 +1,33 @@
 package jpu2016.gameframe;
 
 import java.awt.Graphics;
-import java.awt.image.ImageObserver;
 import java.util.Observable;
+import java.util.Observer;
+import javax.swing.JPanel;
 
-public class GamePanel implements IGraphicsBuilder{
-	
-	public GamePanel(IGraphicsBuilder graphicsBuilder){
-		
-	}
-	
-	void update(Observable observable){
-		
-	}
-	
-	void paintCoponent(Graphics graphics){
-		
-	}
+public class GamePanel extends JPanel implements Observer {
 
-	@Override
-	public void applyModelToGraphic(Graphics graphics, ImageObserver observer) {
-		// TODO Auto-generated method stub
-		
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2793165139837378835L;
+
+	public GamePanel(IGraphicsBuilder graphicsBuilder) {
+
 	}
 
-	@Override
-	public int getGlobalWidth() {
-		// TODO Auto-generated method stub
-		return 0;
+	void update(Observable observable) {
+
+	}
+
+	void paintCoponent(Graphics graphics) {
+
 	}
 
 	@Override
-	public int getGlobalHeight() {
+	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
-		return 0;
+
 	}
 
 }
