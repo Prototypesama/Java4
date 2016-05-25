@@ -16,7 +16,7 @@ public class Missile extends Mobile {
 		super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
 	}
 	
-	public static int getWidthWithDirection(Direction direction){
+	public static int getWidthWithADirection(Direction direction){
 		
 		return WIDTH;
 		
@@ -29,11 +29,15 @@ public class Missile extends Mobile {
 	}
 	
 	public void move(){
-		
+		distance_Traveled += SPEED;
 	}
 	
 	public boolean isWeapon() {
-		return false;
+		if(this.distance_Traveled <= MAX_DISTANCE_TRAVELED){
+			return true;
+		}else{
+			return false;
+		}
 	}
 	
 }
