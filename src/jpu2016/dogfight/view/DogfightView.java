@@ -31,7 +31,7 @@ public class DogfightView implements Runnable, IViewSystem {
 	}
 
 	@Override
-	public String displayMessage(String mesage) {
+	public String displayMessage(String message) {
 		// TODO Auto-generated method stub
 		return null;
 	}
